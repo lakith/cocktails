@@ -11,15 +11,18 @@ export const theme = extendTheme({
   },
   fonts: {
     body: 'Lato, sans-serif',
-    heading: 'Forum, serif',
+    heading: 'Jet Sans,sans-serif',
     mono: 'Menlo, monospace',
   },
   colors: {
     brand: {
-      50: '#ff8000',
+      100: '#ff8000',
     },
-    text: {
-      50: '#242e30',
+    black: {
+      100: '#242e30',
+    },
+    white: {
+      100: '#fff',
     },
   },
 });
