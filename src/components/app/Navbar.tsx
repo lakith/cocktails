@@ -19,17 +19,7 @@ import { Link as RouterLink } from 'react-router-dom';
 
 function NavLink({ to, children }: { to: string; children: ReactNode }) {
   return (
-    <Link
-      as={RouterLink}
-      px={2}
-      py={1}
-      rounded="md"
-      _hover={{
-        textDecoration: 'none',
-        color: 'olive.500',
-      }}
-      to={to}
-    >
+    <Link as={RouterLink} px={2} py={1} rounded="md" to={to}>
       {children}
     </Link>
   );
@@ -37,19 +27,16 @@ function NavLink({ to, children }: { to: string; children: ReactNode }) {
 
 export function Navbar(): ReactElement {
   const isDesktop = useBreakpointValue({ base: false, lg: true });
-  // @ts-ignore
-  // @ts-ignore
-  // @ts-ignore
-  // @ts-ignore
+
   return (
     <Box bg="brand.100">
       <Container maxW={['1280px']}>
         <Flex h={16} alignItems="center" justify="space-between">
           <HStack alignItems="center">
             <NavLink to="/">
-              <Icon w={12} h={12} color="#fff" as={FaCocktail} />
+              <Icon w={12} h={12} color="white.100" as={FaCocktail} />
             </NavLink>
-            <Heading as="h1" fontStyle="italic" color="#fff">
+            <Heading as="h1" fontStyle="italic" color="white.100">
               Cocktail Finder
             </Heading>
           </HStack>
@@ -58,11 +45,11 @@ export function Navbar(): ReactElement {
             <Box width="25%">
               <InputGroup>
                 <InputLeftElement pointerEvents="none">
-                  <BiSearchAlt color="#fff" />
+                  <BiSearchAlt color="white.100" size={20} />
                 </InputLeftElement>
                 <Input
-                  color="#fff"
-                  _placeholder={{ color: '#fff' }}
+                  color="white.100"
+                  _placeholder={{ color: 'white.100' }}
                   placeholder="Search your favourite cocktail"
                   variant="flushed"
                   px={5}
