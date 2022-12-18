@@ -1,10 +1,12 @@
-import { Container, Stack } from '@chakra-ui/react';
+import { Container, Flex, Stack } from '@chakra-ui/react';
 import { ReactElement } from 'react';
+
+import { Drinks } from '../drinks/Drinks';
 
 export function Home(): ReactElement {
   return (
-    <Stack align="center" justify="center" height="84vh">
-      <Container />
-    </Stack>
+    <Flex w="100%" flexDir="column" alignItems="flex-start">
+      <Drinks />
+    </Flex>
   );
 }

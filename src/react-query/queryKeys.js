@@ -1,4 +1,4 @@
 export const queryKeys = {
-  cocktails: 'treatments',
-  ordinary_drinks: 'appointments',
+  cocktails: 'cocktails',
+  ordinary_drinks: 'ordinary_drinks',
 };
