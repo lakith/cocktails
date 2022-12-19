@@ -3,8 +3,6 @@ import { ReactElement } from 'react';
 
 import { Drinks as DrinkType } from '../../types/types';
 import { Drink } from './Drink';
-import { useCocktails } from './hooks/useCocktails';
-import { useOrdinaryDrinks } from './hooks/useOrdinaryDrinks';
 
 interface DrinkProps {
   cocktails: DrinkType;
@@ -40,11 +38,17 @@ function displayDrinks(
 }
 
 export function Drinks({
-  cocktails,
+  cocktails = null,
   ordinaryDrinks = null,
 }: DrinkProps): ReactElement {
-  const cocktailView = displayDrinks(cocktails, 'Top Cocktails');
-  const ordinaryDrinkView = displayDrinks(ordinaryDrinks, 'Top Mocktails');
+  let cocktailView = null;
+  if (cocktails && cocktails.drinks) {
+    cocktailView = displayDrinks(cocktails, 'Top Cocktails');
+  }
+  let ordinaryDrinkView = null;
+  if (ordinaryDrinks && ordinaryDrinks.drinks) {
+    ordinaryDrinkView = displayDrinks(ordinaryDrinks, 'Top Mocktails');
+  }
 
   return (
     <Container maxW={['1280px']} py={['30px']}>
