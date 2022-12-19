@@ -6,6 +6,11 @@ import { Drink } from './Drink';
 import { useCocktails } from './hooks/useCocktails';
 import { useOrdinaryDrinks } from './hooks/useOrdinaryDrinks';
 
+interface DrinkProps {
+  cocktails: DrinkType;
+  ordinaryDrinks: DrinkType;
+}
+
 function displayDrinks(
   drinkType: DrinkType,
   drinkDescription: string
@@ -34,9 +39,10 @@ function displayDrinks(
   );
 }
 
-export function Drinks(): ReactElement {
-  const cocktails = useCocktails();
-  const ordinaryDrinks = useOrdinaryDrinks();
+export function Drinks({
+  cocktails,
+  ordinaryDrinks = null,
+}: DrinkProps): ReactElement {
   const cocktailView = displayDrinks(cocktails, 'Top Cocktails');
   const ordinaryDrinkView = displayDrinks(ordinaryDrinks, 'Top Mocktails');
 
