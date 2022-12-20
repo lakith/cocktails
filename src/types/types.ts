@@ -4,6 +4,7 @@ export interface Id {
 
 export interface Drink extends Id {
   strDrink: string;
+  strTags: string;
   strDrinkThumb?: string;
   strCategory?: string;
   strAlcoholic?: string;

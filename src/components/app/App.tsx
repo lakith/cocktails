@@ -6,7 +6,7 @@ import { ReactQueryDevtools } from 'react-query/devtools';
 import { queryClient } from '../../react-query/queryClient';
 import { theme } from '../../theme';
 import { Loading } from '../common/Loading';
-import { AppRoutes } from '../home/AppRoutes';
+import { AppRoutes } from './AppRoutes';
 import { Navbar } from './Navbar';
 
 function App(): ReactElement {
