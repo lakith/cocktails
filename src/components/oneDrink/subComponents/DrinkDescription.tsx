@@ -15,8 +15,8 @@ export function DrinkDescription({
   strTags,
 }: DrinkDescriptionProps): ReactElement {
   return (
-    <VStack>
-      <Box>
+    <VStack width="100%">
+      <Box width="100%">
         <Heading as="h3" size="lg" paddingBottom="30px" marginTop="-20px">
           About
         </Heading>
@@ -28,8 +28,11 @@ export function DrinkDescription({
             Tags
           </Text>
           <HStack spacing={2} paddingBottom="20px">
-            {strTags &&
-              strTags.split(',').map((tag) => <Tag key={tag}>{tag}</Tag>)}
+            {strTags ? (
+              strTags.split(',').map((tag) => <Tag key={tag}>{tag}</Tag>)
+            ) : (
+              <Tag>No tags to Display</Tag>
+            )}
           </HStack>
           <Box display="flex" py="10px">
             <Text textTransform="uppercase" fontWeight="bold">

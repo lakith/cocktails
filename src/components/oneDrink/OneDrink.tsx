@@ -1,4 +1,4 @@
-import { Container, Flex, Progress, Stack } from '@chakra-ui/react';
+import { Container, Flex, Heading, Progress, Stack } from '@chakra-ui/react';
 import { ReactElement } from 'react';
 import { useParams } from 'react-router-dom';
 
@@ -16,11 +16,17 @@ export function OneDrink(): ReactElement {
       <Container maxW={['1280px']} py={['30px']}>
         {drinkdetails ? (
           <>
-            <Stack direction={['column', 'row']} spacing="100px">
+            <Heading as="h2" size="2xl" textTransform="uppercase" py="20px">
+              {drinkdetails.drinks[0].strDrink}
+            </Heading>
+            <Stack
+              direction={['column', 'row']}
+              spacing="100px"
+              marginTop="40px"
+            >
               <DrinkImage
                 imageURL={drinkdetails.drinks[0].strDrinkThumb}
                 altText={drinkdetails.drinks[0].strDrink}
-                drinkName={drinkdetails.drinks[0].strDrink}
               />
               <Ingrediants
                 ingrediantList={[
@@ -33,14 +39,12 @@ export function OneDrink(): ReactElement {
                 ]}
               />
             </Stack>
-            <Stack>
-              <DrinkDescription
-                strAlcoholic={drinkdetails.drinks[0].strAlcoholic}
-                strGlass={drinkdetails.drinks[0].strGlass}
-                strInstructions={drinkdetails.drinks[0].strInstructions}
-                strTags={drinkdetails.drinks[0].strTags}
-              />
-            </Stack>
+            <DrinkDescription
+              strAlcoholic={drinkdetails.drinks[0].strAlcoholic}
+              strGlass={drinkdetails.drinks[0].strGlass}
+              strInstructions={drinkdetails.drinks[0].strInstructions}
+              strTags={drinkdetails.drinks[0].strTags}
+            />
           </>
         ) : (
           <Progress size="md" isIndeterminate />

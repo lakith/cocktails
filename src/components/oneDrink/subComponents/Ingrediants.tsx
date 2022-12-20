@@ -10,12 +10,12 @@ interface IngrediantsProps {
 export function Ingrediants({
   ingrediantList,
 }: IngrediantsProps): ReactElement {
-  console.log('ingrediantList', ingrediantList);
   return (
-    <Box width="100%" paddingTop="80px">
+    <Box width="100%">
       <Heading as="h3" size="lg" paddingBottom="30px" textTransform="uppercase">
         Ingrediants
       </Heading>
+      {/*  TODO: Ingredients Images Needed to be fetch from the server */}
       <List spacing={10}>
         {ingrediantList.map((ingrediant) => {
           if (ingrediant) {
