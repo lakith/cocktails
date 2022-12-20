@@ -6,6 +6,7 @@ import {
   Heading,
   Image,
   Stack,
+  Text,
 } from '@chakra-ui/react';
 import { ReactElement, ReactNode } from 'react';
 
@@ -20,14 +21,14 @@ export function CardItem({
   cardContents,
 }: CardProps): ReactElement {
   return (
-    <Card variant="filled">
+    <Card variant="outline" borderColor="#ebebeb">
       <CardBody maxW="sm">
-        <Image src={imageURL} alt={itemName} borderRadius="sm" />
+        <Image src={imageURL} alt={itemName} borderRadius="lg" />
         <Stack mt="6" spacing="3">
           <Center>
-            <Heading as="h3" size="sm">
+            <Text size="md" fontWeight="600" color="black.200">
               {itemName}
-            </Heading>
+            </Text>
           </Center>
         </Stack>
         {cardContents}

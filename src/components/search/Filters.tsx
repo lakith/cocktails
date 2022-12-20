@@ -1,8 +1,6 @@
-import { Box, Flex, Heading, Text } from '@chakra-ui/react';
+import { Box, Flex, Text } from '@chakra-ui/react';
 import { Select } from 'chakra-react-select';
 import { ReactElement, useState } from 'react';
-
-import { FilterType } from '../../types/types';
 
 interface FiltersProps {
   categories: string[];
@@ -48,17 +46,17 @@ export function Filters({
 
   return (
     <Flex flexDir="column" justifyContent="space-between">
-      <Heading mt={10} textAlign="center" paddingBottom={['30px']}>
-        <Text>Filter your choices</Text>
-      </Heading>
       <Flex
-        flexDir="row"
+        flexDir={['column', 'column', 'column', 'row']}
         width="100%"
         py={['30px']}
         justifyContent="space-between"
-        flexBasis="33%"
+        flexBasis={['100%', '100%', '100%', '33%']}
       >
         <Box width="100%" px={10}>
+          <Text textTransform="uppercase" py="10px" px="5px" fontWeight="bold">
+            Filter By Category
+          </Text>
           <Select
             isMulti
             name="colors"
@@ -75,9 +73,13 @@ export function Filters({
                 display: 'none',
               }),
             }}
+            focusBorderColor="brand.100"
           />
         </Box>
         <Box width="100%" px={10}>
+          <Text textTransform="uppercase" py="10px" px="5px" fontWeight="bold">
+            Filter By Glass Type
+          </Text>
           <Select
             isMulti
             name="colors"
@@ -92,14 +94,18 @@ export function Filters({
                 display: 'none',
               }),
             }}
+            focusBorderColor="brand.100"
           />
         </Box>
         <Box width="100%" px={10}>
+          <Text textTransform="uppercase" py="10px" px="5px" fontWeight="bold">
+            Filter By ingredient
+          </Text>
           <Select
             isMulti
             name="colors"
             options={ingredientsForSelect}
-            placeholder="Select ingredients  to filter"
+            placeholder="Select ingredients to filter"
             variant="filled"
             onChange={(changedIngredients) =>
               onIngrediantChange(
@@ -111,6 +117,7 @@ export function Filters({
                 display: 'none',
               }),
             }}
+            focusBorderColor="brand.100"
           />
         </Box>
       </Flex>

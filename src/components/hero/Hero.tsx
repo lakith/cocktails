@@ -1,17 +1,13 @@
 import {
-  AspectRatio,
   Box,
-  Center,
   Heading,
   HStack,
   Image,
-  Text,
   useBreakpointValue,
   VStack,
 } from '@chakra-ui/react';
 import { ReactElement } from 'react';
 
-import cocktailGlassImage from '../../images/boulevardier-cocktail-glass.webp';
 import cocktailImage from '../../images/cocktail-main.webp';
 
 export function Hero(): ReactElement {
@@ -41,7 +37,7 @@ export function Hero(): ReactElement {
               <Heading
                 size="md"
                 marginTop="30px"
-                color="#ff8000"
+                color="brand.100"
                 fontWeight="bold"
                 lineHeight="2rem"
               >

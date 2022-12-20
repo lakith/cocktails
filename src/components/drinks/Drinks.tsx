@@ -11,13 +11,20 @@ interface DrinkProps {
 
 function displayDrinks(
   drinkType: DrinkType,
-  drinkDescription: string
+  drinkDescription?: string
 ): ReactElement {
   return (
     <Flex flexDir="column" justifyContent="space-between">
-      <Heading mt={10} textAlign="center" paddingBottom={['30px']}>
-        {drinkDescription}
-      </Heading>
+      {drinkDescription ? (
+        <Heading
+          mt={10}
+          textAlign="center"
+          textTransform="uppercase"
+          paddingBottom={['30px']}
+        >
+          {drinkDescription}
+        </Heading>
+      ) : null}
       <Flex
         flexDir="row"
         width="100%"
@@ -28,7 +35,7 @@ function displayDrinks(
       >
         {drinkType &&
           drinkType.drinks.slice(0, 6).map((cocktail) => (
-            <Box key={cocktail.idDrink}>
+            <Box key={cocktail.idDrink} py="10px">
               <Drink drinkData={cocktail} />
             </Box>
           ))}
@@ -43,7 +50,7 @@ export function Drinks({
 }: DrinkProps): ReactElement {
   let cocktailView = null;
   if (cocktails && cocktails.drinks) {
-    cocktailView = displayDrinks(cocktails, 'Top Cocktails');
+    cocktailView = displayDrinks(cocktails, null);
   }
   let ordinaryDrinkView = null;
   if (ordinaryDrinks && ordinaryDrinks.drinks) {

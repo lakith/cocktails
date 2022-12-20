@@ -1,4 +1,6 @@
 import {
+  Box,
+  Button,
   Center,
   Container,
   Heading,
@@ -38,32 +40,53 @@ export default function SearchBox({
   }, [searchTerms]);
 
   return (
-    <Container maxW={['1280px']} py={['30px']}>
-      <Center>
-        <Heading as="h2"> Find your favourite Cocktails Here.</Heading>
-      </Center>
-      <Center>
-        <InputGroup width="80%">
-          <Input
-            type="search"
-            value={search}
-            onChange={(e) => {
-              setSearch(e.target.value);
-              setIsSearch(true);
-            }}
-            placeholder="Enter your Favourite Cocktail here"
-            width="80%"
-          />
-          <InputRightElement>
-            <BiSearchAlt color="white.100" size={20} />
-          </InputRightElement>
-        </InputGroup>
-      </Center>
-      <Filters
-        categories={categories}
-        glassTypes={glassTypes}
-        ingredients={ingredients}
-      />
-    </Container>
+    <Box width="100%" bgColor="#efedea">
+      <Container maxW={['1280px']} py={['30px']}>
+        <Center>
+          <Heading
+            as="h2"
+            textTransform="uppercase"
+            marginTop="70px"
+            marginBottom="50px"
+          >
+            Find your favourite Cocktails Here
+          </Heading>
+        </Center>
+        <Center>
+          <InputGroup width="80%">
+            <Input
+              type="search"
+              value={search}
+              onChange={(e) => {
+                setSearch(e.target.value);
+                setIsSearch(true);
+              }}
+              placeholder="Find Your Cocktail!"
+              width="100%"
+              size="lg"
+              variant="filled"
+              _placeholder={{ color: '#000', opacity: 0.4 }}
+              borderColor="brand.100"
+              focusBorderColor="purple.100"
+            />
+            <InputRightElement width="15%" height="50px" top="-1px" right="3px">
+              <Button
+                width="100%"
+                bgColor="brand.100"
+                color="#fff"
+                _hover={{ bgColor: 'brand.100' }}
+              >
+                Search
+              </Button>
+            </InputRightElement>
+          </InputGroup>
+        </Center>
+        <Filters
+          categories={categories}
+          glassTypes={glassTypes}
+          ingredients={ingredients}
+        />
+      </Container>
+    </Box>
   );
 }

@@ -20,9 +20,13 @@ export const theme = extendTheme({
     },
     black: {
       100: '#242e30',
+      200: '#3b444b',
     },
     white: {
       100: '#fff',
+    },
+    purple: {
+      100: '#5b3d5b',
     },
   },
 });
