@@ -1,6 +1,7 @@
 import {
   Center,
   Container,
+  Heading,
   Input,
   InputGroup,
   InputRightElement,
@@ -39,6 +40,9 @@ export default function SearchBox({
   return (
     <Container maxW={['1280px']} py={['30px']}>
       <Center>
+        <Heading as="h2"> Find your favourite Cocktails Here.</Heading>
+      </Center>
+      <Center>
         <InputGroup width="80%">
           <Input
             type="search"
@@ -55,13 +59,11 @@ export default function SearchBox({
           </InputRightElement>
         </InputGroup>
       </Center>
-      {categories.length || glassTypes.length || ingredients.length ? (
-        <Filters
-          categories={categories}
-          glassTypes={glassTypes}
-          ingredients={ingredients}
-        />
-      ) : null}
+      <Filters
+        categories={categories}
+        glassTypes={glassTypes}
+        ingredients={ingredients}
+      />
     </Container>
   );
 }

@@ -5,6 +5,7 @@ import { Drinks as DrinkType } from '../../types/types';
 import { Drinks } from '../drinks/Drinks';
 import { useCocktails } from '../drinks/hooks/useCocktails';
 import { useOrdinaryDrinks } from '../drinks/hooks/useOrdinaryDrinks';
+import { Hero } from '../hero/Hero';
 import SearchBox from '../search/SearchBox';
 
 export function Home(): ReactElement {
@@ -54,6 +55,7 @@ export function Home(): ReactElement {
 
   return (
     <Flex w="100%" flexDir="column" alignItems="flex-start">
+      <Hero />
       <SearchBox
         setIsSearch={setIsSearch}
         setSearchTeams={setSearchTerms}

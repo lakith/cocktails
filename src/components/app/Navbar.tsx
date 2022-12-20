@@ -5,16 +5,14 @@ import {
   Heading,
   HStack,
   Icon,
-  Input,
-  InputGroup,
-  InputLeftElement,
   Link,
   Spacer,
+  Text,
   useBreakpointValue,
+  VStack,
 } from '@chakra-ui/react';
 import { ReactElement, ReactNode } from 'react';
-import { BiSearchAlt } from 'react-icons/bi';
-import { FaCocktail } from 'react-icons/fa';
+import { FaCocktail, FaWineBottle } from 'react-icons/fa';
 import { Link as RouterLink } from 'react-router-dom';
 
 function NavLink({ to, children }: { to: string; children: ReactNode }) {
@@ -31,32 +29,43 @@ export function Navbar(): ReactElement {
   return (
     <Box bg="brand.100">
       <Container maxW={['1280px']}>
-        <Flex h={16} alignItems="center" justify="space-between">
+        <Flex h={120} alignItems="center" justify="space-between">
           <HStack alignItems="center">
             <NavLink to="/">
-              <Icon w={12} h={12} color="white.100" as={FaCocktail} />
+              <Icon w={20} h={20} color="white.100" as={FaCocktail} />
             </NavLink>
-            <Heading as="h1" fontStyle="italic" color="white.100">
+            <Heading
+              as="h1"
+              fontStyle="italic"
+              color="white.100"
+              textTransform="uppercase"
+              marginTop="10px !important"
+            >
               Cocktail Finder
             </Heading>
           </HStack>
           <Spacer />
           {isDesktop ? (
-            <Box width="25%">
-              <InputGroup>
-                <InputLeftElement pointerEvents="none">
-                  <BiSearchAlt color="white.100" size={20} />
-                </InputLeftElement>
-                <Input
+            <VStack>
+              <Box>
+                <Text
+                  variant="outline"
+                  fontSize="xl"
+                  fontWeight="900"
                   color="white.100"
-                  _placeholder={{ color: 'white.100' }}
-                  placeholder="Search your favourite cocktail"
-                  variant="flushed"
-                  px={5}
-                  py={5}
-                />
-              </InputGroup>
-            </Box>
+                  textTransform="uppercase"
+                >
+                  Greatest Cocktails Of All Time!
+                </Text>
+              </Box>
+              <Box>
+                <HStack>
+                  <Icon w={5} h={5} color="white.100" as={FaWineBottle} />
+                  <Icon w={5} h={5} color="white.100" as={FaWineBottle} />
+                  <Icon w={5} h={5} color="white.100" as={FaWineBottle} />
+                </HStack>
+              </Box>
+            </VStack>
           ) : null}
         </Flex>
       </Container>
