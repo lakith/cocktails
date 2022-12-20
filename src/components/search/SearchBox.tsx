@@ -9,6 +9,7 @@ import { ReactElement, useEffect, useState } from 'react';
 import { BiSearchAlt } from 'react-icons/bi';
 
 import { Drinks } from '../../types/types';
+import { Filters } from './Filters';
 import useDebounce from './hooks/useDebounce';
 import { useSearchCocktail } from './hooks/useSearchCocktail';
 
@@ -54,6 +55,11 @@ export default function SearchBox({
           </InputRightElement>
         </InputGroup>
       </Center>
+      <Filters
+        categories={categories}
+        glassTypes={glassTypes}
+        ingredients={ingredients}
+      />
     </Container>
   );
 }
