@@ -1,6 +1,8 @@
 import { Box, Flex, Heading, Text } from '@chakra-ui/react';
 import { Select } from 'chakra-react-select';
-import { ReactElement } from 'react';
+import { ReactElement, useState } from 'react';
+
+import { FilterType } from '../../types/types';
 
 interface FiltersProps {
   categories: string[];
@@ -28,6 +30,22 @@ export function Filters({
     value: ingrediant,
   }));
 
+  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+  const [selectedGlassTypes, setSelectedGlassTypes] = useState<string[]>([]);
+  const [selectedIngredients, setSelectedIngredients] = useState<string[]>([]);
+
+  const onCategoryChange = (changedCategories: string[]): void => {
+    setSelectedCategories(changedCategories);
+  };
+
+  const onGlassTypeChange = (changedGlassType: string[]): void => {
+    setSelectedGlassTypes(changedGlassType);
+  };
+
+  const onIngrediantChange = (changedIngrediants: string[]): void => {
+    setSelectedIngredients(changedIngrediants);
+  };
+
   return (
     <Flex flexDir="column" justifyContent="space-between">
       <Heading mt={10} textAlign="center" paddingBottom={['30px']}>
@@ -47,7 +65,11 @@ export function Filters({
             options={categoriesForSelect}
             placeholder="Select categories to filter"
             variant="filled"
-            onChange={(e) => console.log(e)}
+            onChange={(changedCategories) =>
+              onCategoryChange(
+                changedCategories.map((category) => category.value)
+              )
+            }
             chakraStyles={{
               dropdownIndicator: () => ({
                 display: 'none',
@@ -62,7 +84,9 @@ export function Filters({
             options={glassTypesForSelect}
             placeholder="Select glass type to filter"
             variant="filled"
-            onChange={(e) => console.log(e)}
+            onChange={(changedGlasses) =>
+              onGlassTypeChange(changedGlasses.map((glass) => glass.value))
+            }
             chakraStyles={{
               dropdownIndicator: () => ({
                 display: 'none',
@@ -77,7 +101,11 @@ export function Filters({
             options={ingredientsForSelect}
             placeholder="Select ingredients  to filter"
             variant="filled"
-            onChange={(e) => console.log(e)}
+            onChange={(changedIngredients) =>
+              onIngrediantChange(
+                changedIngredients.map((ingredient) => ingredient.value)
+              )
+            }
             chakraStyles={{
               dropdownIndicator: () => ({
                 display: 'none',

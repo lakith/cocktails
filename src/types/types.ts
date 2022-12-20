@@ -17,6 +17,11 @@ export interface Drink extends Id {
   strIngredient6?: string;
 }
 
+export interface FilterType {
+  label: string;
+  value: string;
+}
+
 export interface Drinks {
   drinks: Drink[];
 }

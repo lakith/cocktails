@@ -55,11 +55,13 @@ export default function SearchBox({
           </InputRightElement>
         </InputGroup>
       </Center>
-      <Filters
-        categories={categories}
-        glassTypes={glassTypes}
-        ingredients={ingredients}
-      />
+      {categories.length || glassTypes.length || ingredients.length ? (
+        <Filters
+          categories={categories}
+          glassTypes={glassTypes}
+          ingredients={ingredients}
+        />
+      ) : null}
     </Container>
   );
 }
