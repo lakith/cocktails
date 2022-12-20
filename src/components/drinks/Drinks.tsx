@@ -34,6 +34,7 @@ function displayDrinks(
         flexBasis="33%"
       >
         {drinkType &&
+          drinkType.drinks &&
           drinkType.drinks.slice(0, 6).map((cocktail) => (
             <Box key={cocktail.idDrink} py="10px">
               <Drink drinkData={cocktail} />
