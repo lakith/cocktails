@@ -11,13 +11,13 @@ This project helps you to find cocktails of your choice. Developed based on the 
 
 Dillinger uses a number of open source projects to work properly:
 
-- React.js
+- React.js -
   React makes it simple to create interactive lightweight user interfaces
 - React Query - awesome web-based text editor
   React Query is a tool that makes your data fetching code faster, easier, and more powerful. This provides out of the box caching request retry on fail. Caching and Request retry helps to make the app more reliable and fast
-- Axios
+- Axios -
   lightweight, promise-based HTTP client. This helps for better error handling.
-- Chakra UI
+- Chakra UI -
   This provides a set of accessible, reusable, and composable React components that make it super easy to create web apps. This is a light weight and more performance optimised than most of the other UI libraries. And It has the build in support for mobile responsiveness.
 - TypeScript
 
