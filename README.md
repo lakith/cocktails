@@ -1,46 +1,48 @@
-# Getting Started with Create React App
+# Cocktail Finder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project helps you to find cocktails of your choice. Developed based on the data taken from [thecocktaildb.com](https://www.thecocktaildb.com/api.php)
 
-## Available Scripts
+## Features
+- View Populer Cocktails
+- Search your favourite cocktail
+- View details (key Ingrediants, how to make) of a cocktail
 
-In the project directory, you can run:
+## Tech
 
-### `npm start`
+Dillinger uses a number of open source projects to work properly:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- React.js
+  React makes it simple to create interactive lightweight user interfaces
+- React Query - awesome web-based text editor
+  React Query is a tool that makes your data fetching code faster, easier, and more powerful. This provides out of the box caching request retry on fail. Caching and Request retry helps to make the app more reliable and fast
+- Axios
+  lightweight, promise-based HTTP client. This helps for better error handling.
+- Chakra UI
+  This provides a set of accessible, reusable, and composable React components that make it super easy to create web apps. This is a light weight and more performance optimised than most of the other UI libraries. And It has the build in support for mobile responsiveness.
+- TypeScript
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Installation
 
-### `npm test`
+Requires [Node.js](https://nodejs.org/) v14+ to run.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Install the dependencies and devDependencies and start the server.
 
-### `npm run build`
+```sh
+cd cocktails
+npm i
+npm run start
+<!--This starts the app in port 3000-->
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+For production environments...
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```sh
+npm install --production
+NODE_ENV=production npm run start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## License
+MIT
 
-### `npm run eject`
+**Free Software, Hell Yeah!**
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
