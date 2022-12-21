@@ -11,7 +11,7 @@ import {
 import { ReactElement, useEffect, useState } from 'react';
 import { BiSearchAlt } from 'react-icons/bi';
 
-import { Drinks } from '../../types/types';
+import { Drinks } from '../../../../types/types';
 import { Filters } from './Filters';
 import useDebounce from './hooks/useDebounce';
 import { useSearchCocktail } from './hooks/useSearchCocktail';

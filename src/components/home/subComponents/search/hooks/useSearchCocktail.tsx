@@ -1,8 +1,8 @@
 import { useQuery, useQueryClient } from 'react-query';
 
-import { axiosInstance } from '../../../axiosinstance';
-import { queryKeys } from '../../../react-query/queryKeys';
-import { Drinks } from '../../../types/types';
+import { axiosInstance } from '../../../../../axiosinstance';
+import { queryKeys } from '../../../../../react-query/queryKeys';
+import { Drinks } from '../../../../../types/types';
 
 // for when we need a query function for useQuery
 async function getSearchTearms(searchKey: string): Promise<Drinks> {

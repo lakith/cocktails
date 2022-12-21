@@ -2,11 +2,11 @@ import { Flex } from '@chakra-ui/react';
 import { ReactElement, useState } from 'react';
 
 import { Drinks as DrinkType } from '../../types/types';
-import { Drinks } from '../drinks/Drinks';
-import { useCocktails } from '../drinks/hooks/useCocktails';
-import { useOrdinaryDrinks } from '../drinks/hooks/useOrdinaryDrinks';
-import { Hero } from '../hero/Hero';
-import SearchBox from '../search/SearchBox';
+import { Drinks } from './subComponents/drinks/Drinks';
+import { useCocktails } from './subComponents/drinks/hooks/useCocktails';
+import { useOrdinaryDrinks } from './subComponents/drinks/hooks/useOrdinaryDrinks';
+import { Hero } from './subComponents/hero/Hero';
+import SearchBox from './subComponents/search/SearchBox';
 
 export function Home(): ReactElement {
   const [isSearching, setIsSearch] = useState(false);

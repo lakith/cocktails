@@ -1,7 +1,7 @@
 import { Box, Container, Flex, Heading } from '@chakra-ui/react';
 import { ReactElement } from 'react';
 
-import { Drinks as DrinkType } from '../../types/types';
+import { Drinks as DrinkType } from '../../../../types/types';
 import { Drink } from './Drink';
 
 interface DrinkProps {

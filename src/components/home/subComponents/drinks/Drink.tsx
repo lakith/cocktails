@@ -1,8 +1,8 @@
 import { ReactElement } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
-import type { Drink as DrinkType } from '../../types/types';
-import { CardItem } from '../common/CardItem';
+import type { Drink as DrinkType } from '../../../../types/types';
+import { CardItem } from '../../../common/CardItem';
 
 interface DrinkProps {
   drinkData: DrinkType;

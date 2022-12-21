@@ -1,8 +1,8 @@
 import { useQuery } from 'react-query';
 
-import { axiosInstance } from '../../../axiosinstance';
-import { queryKeys } from '../../../react-query/queryKeys';
-import { Drinks } from '../../../types/types';
+import { axiosInstance } from '../../../../../axiosinstance';
+import { queryKeys } from '../../../../../react-query/queryKeys';
+import { Drinks } from '../../../../../types/types';
 
 async function getOrdinaryDrinks(): Promise<Drinks> {
   const { data } = await axiosInstance.get('/filter.php', {

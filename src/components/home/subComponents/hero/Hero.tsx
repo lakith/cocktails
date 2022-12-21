@@ -8,7 +8,7 @@ import {
 } from '@chakra-ui/react';
 import { ReactElement } from 'react';
 
-import cocktailImage from '../../images/cocktail-main.webp';
+import cocktailImage from '../../../../images/cocktail-main.webp';
 
 export function Hero(): ReactElement {
   const isDesktop = useBreakpointValue({ base: false, lg: true });
