@@ -1,13 +1,4 @@
-import {
-  Box,
-  Card,
-  CardBody,
-  Center,
-  Heading,
-  Image,
-  Stack,
-  Text,
-} from '@chakra-ui/react';
+import { Card, CardBody, Center, Image, Stack, Text } from '@chakra-ui/react';
 import { ReactElement, ReactNode } from 'react';
 
 interface CardProps {
@@ -23,7 +14,13 @@ export function CardItem({
   return (
     <Card variant="outline" borderColor="#ebebeb">
       <CardBody maxW="sm">
-        <Image src={imageURL} alt={itemName} borderRadius="lg" />
+        <Image
+          src={imageURL}
+          alt={itemName}
+          borderRadius="lg"
+          width="300px"
+          height="300px"
+        />
         <Stack mt="6" spacing="3">
           <Center>
             <Text size="md" fontWeight="600" color="black.200">

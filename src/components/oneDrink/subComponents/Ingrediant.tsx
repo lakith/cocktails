@@ -29,7 +29,7 @@ export function Ingrediant({
       <Button onClick={onToggle}>{ingrediantName}</Button>
       <Collapse in={isOpen} animateOpacity>
         <Box width="150px">
-          <Image src={imageUrl} alt={altText} />
+          <Image src={imageUrl} alt={altText} height="100px" width="100px" />
         </Box>
       </Collapse>
     </ListItem>

@@ -28,6 +28,9 @@ export function Filters({
     value: ingrediant,
   }));
 
+  // TODO: Need to add these filters to cocktail list
+  // TODO: Use javasript array filter and filter out the correct cocktail list
+
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [selectedGlassTypes, setSelectedGlassTypes] = useState<string[]>([]);
   const [selectedIngredients, setSelectedIngredients] = useState<string[]>([]);

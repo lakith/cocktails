@@ -9,7 +9,6 @@ import {
   InputRightElement,
 } from '@chakra-ui/react';
 import { ReactElement, useEffect, useState } from 'react';
-import { BiSearchAlt } from 'react-icons/bi';
 
 import { Drinks } from '../../../../types/types';
 import { Filters } from './Filters';
@@ -37,7 +36,7 @@ export default function SearchBox({
 
   useEffect(() => {
     setSearchTeams(searchTerms);
-  }, [searchTerms]);
+  }, [searchTerms, setSearchTeams]);
 
   return (
     <Box width="100%" bgColor="#efedea">

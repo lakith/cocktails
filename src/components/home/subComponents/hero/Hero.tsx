@@ -50,7 +50,12 @@ export function Hero(): ReactElement {
         </Box>
         {isDesktop ? (
           <Box width="50%" margin="0 !important">
-            <Image zIndex={-1} src={cocktailImage} alt="Cocktail Glass" />
+            <Image
+              zIndex={-1}
+              src={cocktailImage}
+              height="658px"
+              alt="Cocktail Glass"
+            />
           </Box>
         ) : null}
       </HStack>

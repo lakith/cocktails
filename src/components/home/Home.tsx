@@ -1,10 +1,10 @@
 import { Flex } from '@chakra-ui/react';
 import { ReactElement, useState } from 'react';
 
+import { queryKeys } from '../../react-query/queryKeys';
 import { Drinks as DrinkType } from '../../types/types';
 import { Drinks } from './subComponents/drinks/Drinks';
-import { useCocktails } from './subComponents/drinks/hooks/useCocktails';
-import { useOrdinaryDrinks } from './subComponents/drinks/hooks/useOrdinaryDrinks';
+import { useDrinks } from './subComponents/drinks/hooks/useDrinks';
 import { Hero } from './subComponents/hero/Hero';
 import SearchBox from './subComponents/search/SearchBox';
 
@@ -12,8 +12,8 @@ export function Home(): ReactElement {
   const [isSearching, setIsSearch] = useState(false);
   const [searchTerms, setSearchTerms] = useState<DrinkType>(null);
 
-  const cocktails = useCocktails();
-  const ordinaryDrinks = useOrdinaryDrinks();
+  const cocktails = useDrinks(queryKeys.cocktails);
+  const ordinaryDrinks = useDrinks(queryKeys.ordinary_drinks);
 
   const categories: string[] = [];
   const glassTypes: string[] = [];

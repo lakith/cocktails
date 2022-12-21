@@ -1,4 +1,4 @@
-import { Box, Heading, Image } from '@chakra-ui/react';
+import { Box, Image } from '@chakra-ui/react';
 import { ReactElement } from 'react';
 
 interface DrinkImageProps {
@@ -12,7 +12,7 @@ export function DrinkImage({
 }: DrinkImageProps): ReactElement {
   return (
     <Box boxSize="xl">
-      <Image src={imageURL} alt={altText} />
+      <Image src={imageURL} alt={altText} height="350px" width="350px" />
     </Box>
   );
 }

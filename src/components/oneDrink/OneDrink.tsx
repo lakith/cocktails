@@ -16,7 +16,7 @@ export function OneDrink(): ReactElement {
       <Container maxW={['1280px']} py={['30px']}>
         {drinkdetails ? (
           <>
-            <Heading as="h2" size="2xl" textTransform="uppercase" py="20px">
+            <Heading size="2xl" textTransform="uppercase" py="20px">
               {drinkdetails.drinks[0].strDrink}
             </Heading>
             <Stack
