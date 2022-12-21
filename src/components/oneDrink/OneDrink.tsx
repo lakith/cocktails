@@ -47,7 +47,7 @@ export function OneDrink(): ReactElement {
             />
           </>
         ) : (
-          <Progress size="md" isIndeterminate />
+          <Progress size="md" className="test" isIndeterminate />
         )}
       </Container>
     </Flex>
